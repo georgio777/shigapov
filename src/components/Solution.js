@@ -28,7 +28,7 @@ function Solution({value}) {
   }, [isOpen]);
 
   useEffect(()=>{
-    contentRef.current.style.maxHeight = `${topRef.current.scrollHeight}px`;
+    contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+13}px`;
   },[])
 
 	return (

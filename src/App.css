@@ -104,6 +104,8 @@
 @import url(./assets/styles/Slider.css);
 @import url(./assets/styles/Cases.css);
 @import url(./assets/styles/Solutions.css);
+@import url(./assets/styles/Footer.css);
+@import url(./assets/styles/PostPage.css);
 
 @font-face {
   font-family: 'Onest';
@@ -128,7 +130,7 @@ a {
 }
 
 main {
-  height: 200vh;
+  min-height: 100vh;
 }
 
 .lcontainer {

@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 import { Outlet } from "react-router";
 import Header from "./Header";
+import Footer from "./Footer";
 
 // Задаем отступ у слайдера исходя из высоты хэдэра
 const HeaderContext = createContext();
@@ -15,6 +16,7 @@ const Layout = () => {
           <Outlet />
         </HeaderContext.Provider>
       </main>
+      <Footer />
     </div>
   );
 };

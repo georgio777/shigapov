@@ -4,9 +4,11 @@ import { Layout } from './components/Layout';
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
 import PostPage from './pages/PostPage';
+import Policy from './pages/Policy';
 import './App.css';
 import Scrollbar from 'smooth-scrollbar';
 import { useMotionValue } from 'motion/react';
+
 
 // экспорт контекста чтобы отлавливать его в animatedheading так как, smooth scrollbar перехватывает логику скроллинга и ломает анимированный заголовок
 export const ScrollContext = React.createContext();
@@ -41,6 +43,7 @@ function App() {
                 {/* Страница контактов */}
                 <Route path="contacts" element={<Contacts />} />
                 <Route path="post/:id" element={<PostPage />} /> {/* Добавлен маршрут для постов */}
+                <Route path="policy" element={<Policy />} />
               </Route>
             </Routes>
           </BrowserRouter>

@@ -1,7 +1,7 @@
 .solutions__section {
     border-radius: var(--brr);
     margin-top: 50px;
-    padding-bottom: 90px;
+    padding-bottom: 20px;
 }
 
 .solutions__heading {
@@ -59,6 +59,7 @@
 .solutions__middle, .solutions__bottom, .solutions__cards {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .solutions__cards {
@@ -144,6 +145,7 @@
 .solution__card--description {
     font-size: 1.8rem;
     color: #637283;
+    max-width: 400px;
 }
 
 
