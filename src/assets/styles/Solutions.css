@@ -282,4 +282,7 @@
     .solutions__bottom {
         margin-bottom: 40px;
     }
+    .solutions__heading {
+        padding-bottom: 30px;
+    }
 }

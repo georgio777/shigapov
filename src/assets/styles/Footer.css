@@ -85,6 +85,7 @@ footer {
   color: var(--textcolor);
   column-count: 2; /* Количество колонок */
   column-gap: 20px;
+  max-width: 500px;
 }
 
 .footer__right--top li span {
@@ -108,7 +109,7 @@ footer {
   align-items: stretch;
   width: 160px;
   height: 100%;
-  border-radius: var(--brr);
+  border-radius: 8px;
   background-color: black;
   color: white;
   padding: 14px;
@@ -126,6 +127,7 @@ footer {
   color: var(--textcolor);
   column-count: 2; /* Количество колонок */
   column-gap: 20px;
+  max-width: 500px;
 }
 
 .footer__right--middle ul li {
@@ -142,6 +144,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 36px;
+  min-width: 36px;
   height: 36px;
   border: 1px solid #D9D9D9;
   border-radius: 50%;
@@ -153,10 +156,12 @@ footer {
 
 .footer__right--bottom {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   color: var(--textcolor2);
+  max-width: 700px;
 }
 
 .footer__logo {
@@ -173,3 +178,68 @@ footer {
 }
 
 
+@media (max-width: 1440px) {
+   .footer__right--top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+   }
+   .footer__mail {
+    font-size: 4vw;
+   }
+   .footer__phone {
+    font-size: 4vw;
+   }
+}
+
+@media (max-width: 1024px) {
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__mail {
+    font-size: 6rem;
+  }
+  .footer__phone {
+    font-size: 5rem;
+    margin-bottom: 15px;
+   }
+   .footer__right--top {
+    flex-direction: row-reverse;
+   }
+   .footer__working--hours {
+    margin-bottom: 20px;
+   }
+   .footer__right--middle ul {
+    max-width: 300px;
+    margin: 20px 0;
+   }
+   .footer__right--bottom {
+    max-width: 600px;
+   }
+}
+
+@media (max-width: 767px) {
+  .footer__mail {
+    font-size: 8vw;
+  }
+  .footer__phone {
+    font-size: 9vw;
+  }
+  .footer__right--top {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  .footer__right--top ul {
+    column-count: 1;
+  }
+  .footer__right--bottom {
+    flex-direction: column;
+    align-items: start;
+  }
+  footer {
+    padding-top: 50px;
+  }
+}
