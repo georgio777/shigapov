@@ -41,11 +41,11 @@ const PostsList = () => {
     const mediaSizes = featuredMedia?.media_details?.sizes;
 
     if (windowWidth < 767) {
-      return mediaSizes?.medium?.source_url || mediaSizes?.full?.source_url || '/path/to/placeholder.jpg';
-    } else if (windowWidth < 2500) {
       return mediaSizes?.medium_large?.source_url || mediaSizes?.full?.source_url || '/path/to/placeholder.jpg';
-    } else {
+    } else if (windowWidth < 2000) {
       return mediaSizes?.large?.source_url || mediaSizes?.full?.source_url || '/path/to/placeholder.jpg';
+    } else {
+      return mediaSizes?.["1536x1536"]?.source_url || mediaSizes?.full?.source_url || '/path/to/placeholder.jpg';
     }
   };
 

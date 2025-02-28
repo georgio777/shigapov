@@ -74,7 +74,7 @@ const PostPreview = ({ post, getImageUrl, index }) => {
         rel="noreferrer"
         target="_blank"
       >
-        <p>На сайт</p><span>🡥</span>
+        <p>На сайт</p><span className='icon-arr'></span>
       </a>
     </motion.div>
   );

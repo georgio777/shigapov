@@ -85,7 +85,7 @@ function Solution({value}) {
                 <p className="solutions__offer--text">Тариф {name}</p>
               </div>
               <div className="solutions__offer--right">
-                <a href="http://a1w.ru/wp-content/uploads/2025/02/129794.jpg" target="_blanc" download="129794.jpg" className="icon-plus download-btn"> </a>
+                <a href="http://a1w.ru/wp-content/uploads/2025/02/129794.jpg" target="_blank" rel="noreferrer" download="129794.jpg" className="icon-plus download-btn"> </a>
                 <p>PDF 1 MB</p>
               </div>
             </div>

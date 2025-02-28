@@ -222,7 +222,7 @@ footer {
 
 @media (max-width: 767px) {
   .footer__mail {
-    font-size: 8vw;
+    font-size: 7vw;
   }
   .footer__phone {
     font-size: 9vw;

@@ -19,7 +19,7 @@ function Footer() {
             </p>
             <p className="footer__bitrix">
               <span>24</span> 
-              <a href="https://www.bitrix24.ru/partners/partner/10791528/" target="_blanc">Партнер Битрикс24</a>
+              <a href="https://www.bitrix24.ru/partners/partner/10791528/" rel="noreferrer" target="_blank">Партнер Битрикс24</a>
             </p>
           </div>
           <div className="footer__top--right">
@@ -36,7 +36,7 @@ function Footer() {
                 <li><span className="icon-yandex"></span><a href="/">Яндекс</a></li>
                 <li><span>Ru</span> <a href="https://www.rusprofile.ru/ip/318784700266370">Rusprofile</a> </li>
                 <li><span className="icon-dzen"></span> <a href="/">Dzen</a> </li>
-                <li><span>PDF</span> <a href="http://a1w.ru/wp-content/uploads/2025/02/129794.jpg" target="_blanc" download="129794.jpg">Презентация</a></li>
+                <li><span>PDF</span> <a href="http://a1w.ru/wp-content/uploads/2025/02/129794.jpg" rel="noreferrer" target="_blank" download="129794.jpg">Презентация</a></li>
               </ul>
             </div>
             <div className="footer__right--bottom">
