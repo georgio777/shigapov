@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import PostPreview from './PostPreview'; // Укажи правильный путь
+import PostPreview from './PostPreview';
 
 const PostsList = () => {
   const [posts, setPosts] = useState([]);

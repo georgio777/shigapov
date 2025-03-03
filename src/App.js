@@ -42,7 +42,7 @@ function App() {
                 <Route index element={<Home />} />
                 {/* Страница контактов */}
                 <Route path="contacts" element={<Contacts />} />
-                <Route path="post/:id" element={<PostPage />} /> {/* Добавлен маршрут для постов */}
+                <Route path="post/:id" element={<PostPage />} /> 
                 <Route path="policy" element={<Policy />} />
               </Route>
             </Routes>

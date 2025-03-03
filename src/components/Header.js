@@ -25,7 +25,7 @@ function Header({ headerHeight, setHeight }) {
     return () => {
       window.removeEventListener('scroll', handleScroll); // Убираем обработчик при размонтировании
     };
-  }, [handleScroll]); // Зависит от handleScroll
+  }, [handleScroll]); 
 
   useEffect(() => {
     setHeight(header.current.offsetHeight);

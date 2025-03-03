@@ -1,7 +1,7 @@
 import { useContext, useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useTransform } from 'framer-motion';
-import { ScrollContext } from '../App'; // Убедись, что путь к ScrollContext правильный
+import { ScrollContext } from '../App'; 
 
 const PostPreview = ({ post, getImageUrl, index }) => {
   const imgRef = useRef(null); // Ссылка на элемент картинки
@@ -34,7 +34,7 @@ const PostPreview = ({ post, getImageUrl, index }) => {
     return () => window.removeEventListener('resize', updatePositions); // Чистим слушатель
   }, [scrollY]);
 
-  // Параллакс: сдвиг от 0 до 50px на протяжении start до end
+  // Параллакс: сдвиг от 0 до 80px на протяжении start до end
   const parallaxY = useTransform(scrollY, [start, end], [0, 80]);
 
   return (
