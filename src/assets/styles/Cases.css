@@ -61,6 +61,7 @@
     margin-bottom: 15px;
     color: var(--textcolor2);
     font-size: 1.8rem;
+    font-weight: 300;
 }
 
 .post__preview--href {
@@ -128,6 +129,8 @@
     position: relative;
     overflow: hidden;
     transition: color 0.5s;
+    font-weight: 300;
+    cursor: default;
 }
 
 .button__additional:hover {

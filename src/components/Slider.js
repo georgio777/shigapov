@@ -7,20 +7,20 @@ import { ScrollContext } from '../App';
 
 function Slide1() {
   const [projectsCounter, setCounter] = useState(0);
-  const [counterSpeed, setCounterSpeed] = useState(5);
+  const [counterSpeed, setCounterSpeed] = useState(1);
   const context = useContext(ScrollContext); // Берём весь контекст
   const isVisible = window.innerWidth > 1025
 
   const scrollY = context?.scrollY || 0; // Безопасный доступ
 
-  const yOffset = useTransform(scrollY, [0, 500], [0, -200]); // Смещение
+  const yOffset = useTransform(scrollY, [0, 500], [0, -120]); // Смещение
   
   useEffect(() => {  
       
     if (isVisible && projectsCounter < 58) {
       setTimeout(() => {
         setCounter((value) => value + 1);
-        setCounterSpeed((speed) => speed + 2);
+        setCounterSpeed((speed) => speed + 0.5);
       }, counterSpeed);
     }
   }, [projectsCounter, counterSpeed, isVisible]);

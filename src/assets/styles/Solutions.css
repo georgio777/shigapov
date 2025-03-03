@@ -39,6 +39,7 @@
     border-bottom-right-radius: var(--brr);
     border-bottom-left-radius: var(--brr);
     position: relative;
+    padding-top: 30px;
 }
 
 .solutions__wrapper::after {
@@ -93,6 +94,7 @@
     font-size: 2rem;
     color: black;
     max-width: 700px;
+    font-weight: 300;
 }
 
 .solutions__button--open-modal {
@@ -103,7 +105,7 @@
     display: flex;
     gap: 15px;
     padding: 16px 24px;
-    border-radius: var(--brr);
+    border-radius: 8px;
     background: #D6DEE766;
     width: fit-content;
     height: fit-content;
@@ -111,6 +113,7 @@
     cursor: pointer;
     color: black;
     min-width: 221px;
+    font-weight: 300;
 }
 
 .solutions__button--open-modal span {
@@ -129,8 +132,10 @@
     display: flex;
     background-color: white;
     padding: 30px 36px;
-    border-radius: var(--brr);
+    border-radius: 12px;
     gap: 50px;
+    min-width: 40%;
+    justify-content: space-between;
 }
 
 .solution__card--heading {
@@ -146,7 +151,8 @@
 .solution__card--description {
     font-size: 1.8rem;
     color: #637283;
-    max-width: 400px;
+    max-width: 300px;
+    font-weight: 300;
 }
 
 
@@ -159,6 +165,7 @@
 .solutions__offer--text {
     font-size: 1.6rem;
     color: #637283;
+    font-weight: 300;
 }
 
 .solutions__offer--left {
@@ -199,6 +206,7 @@
     font-size: 1.8rem;
     color: #637283;
     margin-bottom: 15px;
+    font-weight: 300;
 }
 
 @media (max-width: 1440px) {

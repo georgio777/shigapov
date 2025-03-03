@@ -1,7 +1,7 @@
 footer {
   background-color: #F4F6FA;
   padding: 90px 0;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
 
 .footer__top {
@@ -103,11 +103,15 @@ footer {
   margin-bottom: 20px;
 }
 
+.footer__right--top li:nth-child(3) span {
+  font-size: 3rem;
+}
+
 .footer__discuss {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width: 160px;
+  width: 180px;
   height: 100%;
   border-radius: 8px;
   background-color: black;
@@ -162,6 +166,8 @@ footer {
   font-size: 1.2rem;
   color: var(--textcolor2);
   max-width: 700px;
+  font-weight: 300;
+  align-self: end;
 }
 
 .footer__logo {

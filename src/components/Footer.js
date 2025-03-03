@@ -27,7 +27,7 @@ function Footer() {
               <ul>
                 <li><span className="icon-Telegram"></span> Telegram</li>
                 <li><span className="icon-vk"></span> Вконтакте</li>
-                <li><span></span> Whatsapp</li>
+                <li><span className="icon-Whatsapp"></span> Whatsapp</li>
               </ul>
               <div className="footer__discuss">Обсудить <br/> проект <span className="icon-plus"></span></div>
             </div>

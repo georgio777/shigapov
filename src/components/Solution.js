@@ -15,11 +15,13 @@ function Solution({value}) {
 
   const closeContent = () => {
     if (contentRef.current) {
-      contentRef.current.style.maxHeight = `${topRef.current.scrollHeight}px`;  // Закрываем 
+      contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+13+30}px`;  // Закрываем 
     }
   };
 
   useEffect(() => {
+    console.log(topRef.current.offsetHeight);
+    
     if (isOpen) {
       openContent();
     } else {
@@ -28,7 +30,7 @@ function Solution({value}) {
   }, [isOpen]);
 
   useEffect(()=>{
-    contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+13}px`;
+    contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+13+30}px`;
   },[])
 
 	return (
@@ -37,7 +39,6 @@ function Solution({value}) {
 			className="solutions__wrapper">
         <div className="inner__container">
           <div
-
           className="solutions__top">
             <p className="site__txt">Сайт</p>
             <div className="description__column">

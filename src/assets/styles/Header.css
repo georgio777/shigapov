@@ -4,6 +4,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 33px 0;
+    padding-top: 42px;
     position: relative;
     z-index: 444;
 }
@@ -18,6 +19,10 @@ header a {
     font-size: 1.6rem;
     display: flex;
     gap: 24px;
+    font-weight: 300;
+}
+.header__phone {
+    font-weight: 300;
 }
 
 .header__logo {
