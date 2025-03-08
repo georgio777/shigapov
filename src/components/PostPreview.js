@@ -41,6 +41,8 @@ const PostPreview = ({ post, getImageUrl, index }) => {
     <motion.div className="post__preview"
     initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100}}
     whileInView={{ opacity: 1, x: 0}}
+    transition={{ duration: 0.3, ease: 'easeInOut' }}
+    viewport={{ once: true, amount: "some" }}
     >
       <div className='post__preview--top'>
         <div className="post__preview--wrapper">

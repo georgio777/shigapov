@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Layout } from './components/Layout';
+import Header from './components/Header';
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
 import PostPage from './pages/PostPage';
@@ -17,6 +18,8 @@ export const ScrollContext = React.createContext();
 function App() {
   const scrollbarRef = useRef(null);
   const scrollY = useMotionValue(0); // Теперь это MotionValue, а не useState
+  const [headerHeight, setHeaderHeight] = useState(0);
+
   useEffect(() => {
     const scrollbar = Scrollbar.init(scrollbarRef.current, { damping: 0.1 });
     const updateScroll = () => {
@@ -33,21 +36,22 @@ function App() {
 
   return (
     <ScrollContext.Provider value={{ scrollY }}>
-      <div ref={scrollbarRef} 
-      style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
-          <BrowserRouter>
+      <BrowserRouter>
+        <Header headerHeight={headerHeight} setHeight={setHeaderHeight} />
+        <div ref={scrollbarRef} 
+        style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
             <Routes>
-              <Route path="/" element={<Layout />}>
+              <Route path="/" element={<Layout headerHeight={headerHeight} />}>
                 {/* Главная страница */}
-                <Route index element={<Home />} />
+                <Route index element={<Home headerHeight={headerHeight} />} />
                 {/* Страница контактов */}
-                <Route path="contacts" element={<Contacts />} />
-                <Route path="post/:id" element={<PostPage />} /> 
-                <Route path="policy" element={<Policy />} />
+                <Route path="contacts" element={<Contacts headerHeight={headerHeight} />} />
+                <Route path="post/:id" element={<PostPage headerHeight={headerHeight} />} /> 
+                <Route path="policy" element={<Policy headerHeight={headerHeight} />} />
               </Route>
             </Routes>
-          </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     </ScrollContext.Provider>
   );
 }

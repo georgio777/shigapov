@@ -1,17 +1,12 @@
-import React, { useContext } from 'react';
-import { HeaderContext } from "../components/Layout";
-import Slider from '../components/Slider';
+import React from "react";
+import Slider from "../components/Slider";
+import Solutions from "../components/Solutions";
+import PostsList from "../components/PostList";
 import AnimatedHeading from '../components/AnimatedHeading';
-import PostsList from '../components/PostList';
-import Solutions from '../components/Solutions';
 import casesImg from '../assets/figure.svg';
 import solutionsImg from '../assets/figure2.svg'
 
-const Home = () => {
-  // Задаем отступ у слайдера исходя из высоты хэдэра
-  const headerHeight = useContext(HeaderContext);
-
-
+const Home = ({ headerHeight }) => {
   return (
     <>
       <div className='outer__container'>

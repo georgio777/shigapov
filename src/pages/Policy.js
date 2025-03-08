@@ -1,11 +1,8 @@
-import { HeaderContext } from "../components/Layout";
-import { useContext } from "react";
+import React from "react";
 
-const Policy = () => {
-    // Задаем отступ у слайдера исходя из высоты хэдэра
-    const headerHeight = useContext(HeaderContext);
+const Policy = ({ headerHeight }) => {
   return (
-    <div className="lcontainer" style={{ paddingTop: `${headerHeight}px` }}>
+    <div style={{ marginTop: headerHeight }}>
       <h1>Политика конфиденциальности</h1>
       <p>Здесь будет политика конфиденциальности</p>
     </div>
