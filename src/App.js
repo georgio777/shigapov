@@ -18,7 +18,7 @@ function App() {
   const scrollbarRef = useRef(null);
   const scrollY = useMotionValue(0); // Теперь это MotionValue, а не useState
   useEffect(() => {
-    const scrollbar = Scrollbar.init(scrollbarRef.current, { damping: 0.05 });
+    const scrollbar = Scrollbar.init(scrollbarRef.current, { damping: 0.1 });
     const updateScroll = () => {
       scrollY.set(scrollbar.offset.y); // Обновляем MotionValue
     };

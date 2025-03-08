@@ -130,7 +130,7 @@ const text4 = (
 
 const slideTexts = [text1, text2, text3, text4];
 
-const Slider = ({ autoPlayInterval = 60000 }) => {
+const Slider = ({ autoPlayInterval = 6000 }) => {
   // Массив с клонами: [last, ...slides, first]
   const slidesWithClones = [slides[slides.length - 1], ...slides, slides[0]];
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -153,12 +153,31 @@ const Slider = ({ autoPlayInterval = 60000 }) => {
   // Сброс автопроигрывания
   const resetAutoPlay = useCallback(() => {
     if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
-    if (!isHovered.current) {
+    if (!isHovered.current && document.visibilityState === 'visible') {
       autoPlayTimer.current = setInterval(() => {
         nextSlide();
       }, autoPlayInterval);
     }
   }, [autoPlayInterval, nextSlide]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
+      } else {
+        resetAutoPlay();
+      }
+    };
+  
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+  
+    resetAutoPlay(); // Изначальный запуск
+  
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      if (autoPlayTimer.current) clearInterval(autoPlayTimer.current);
+    };
+  }, [resetAutoPlay]);
 
   // Запускаем автоперелистывание
   useEffect(() => {
