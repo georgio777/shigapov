@@ -7,7 +7,8 @@ const corporate = {
 	blocksText: 'Двенадцать универсальных блоков, на главной страннице, для лучшей конверсии',
 	deadline: '14 д.',
 	deadlineDesc: 'Срок разработки составляет от 14 рабочих дней, но не более 21 рабочего дня.',
-	price: '78 950 ₽'
+	price: '78 950 ₽',
+	itemIsOpen: true,
 }
 
 const corporatePlus = {
@@ -17,7 +18,8 @@ const corporatePlus = {
 	blocksText: 'Двенадцать универсальных блоков, на главной страннице, для лучшей конверсии',
 	deadline: '21 д. ',
 	deadlineDesc: 'Срок разработки составляет от 14 рабочих дней, но не более 21 рабочего дня.',
-	price: '98 950 ₽'
+	price: '98 950 ₽',
+	itemIsOpen: false,
 }
 
 const shop = {
@@ -27,7 +29,8 @@ const shop = {
 	blocksText: 'Двенадцать универсальных блоков, на главной страннице, для лучшей конверсии',
 	deadline: '21 д. ',
 	deadlineDesc: 'Срок разработки составляет от 14 рабочих дней, но не более 21 рабочего дня.',
-	price: '98 950 ₽'
+	price: '98 950 ₽',
+	itemIsOpen: false,
 }
 
 const landing = {
@@ -37,7 +40,8 @@ const landing = {
 	blocksText: 'Двенадцать универсальных блоков, на главной страннице, для лучшей конверсии',
 	deadline: '21 д. ',
 	deadlineDesc: 'Срок разработки составляет от 14 рабочих дней, но не более 21 рабочего дня.',
-	price: '98 950 ₽'
+	price: '98 950 ₽',
+	itemIsOpen: false,
 }
 
 function Solutions() {

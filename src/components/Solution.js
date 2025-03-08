@@ -1,11 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 
 function Solution({value}) {
-  const [isOpen, setOpen] = useState(false);
+  const {name,descroption,blocks,blocksText,deadline,deadlineDesc,price,itemIsOpen} = value;
+  const [isOpen, setOpen] = useState(itemIsOpen);
   const contentRef = useRef(null); 
 	const topRef = useRef(null)
 
-  const {name,descroption,blocks,blocksText,deadline,deadlineDesc,price} = value;
 
   const openContent = () => {
     if (contentRef.current) {
@@ -15,13 +15,11 @@ function Solution({value}) {
 
   const closeContent = () => {
     if (contentRef.current) {
-      contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+13+30}px`;  // Закрываем 
+      contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+60}px`;  // Закрываем 
     }
   };
 
-  useEffect(() => {
-    console.log(topRef.current.offsetHeight);
-    
+  useEffect(() => {    
     if (isOpen) {
       openContent();
     } else {
@@ -30,8 +28,10 @@ function Solution({value}) {
   }, [isOpen]);
 
   useEffect(()=>{
-    contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+13+30}px`;
-  },[])
+    setTimeout(() => {
+      isOpen ? openContent() : contentRef.current.style.maxHeight = `${topRef.current.scrollHeight+60}px`;
+    }, 100);
+  })
 
 	return (
 			<div
