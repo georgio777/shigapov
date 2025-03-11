@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
-import { motion, useTransform, useMotionValue } from "framer-motion";
-import { useEffect, useRef, useContext } from "react";
-import { ScrollContext } from '../App';
+import { useEffect, useRef } from "react";
 
 function Header({ headerHeight, setHeight }) {
   const headerRef = useRef();
-  const { scrollY } = useContext(ScrollContext);
-  const lastScrollY = useRef(0);
-  const headerY = useMotionValue(0);
 
   // Устанавливаем высоту хедера
   useEffect(() => {
@@ -16,31 +11,8 @@ function Header({ headerHeight, setHeight }) {
     }
   }, [setHeight]);
 
-  // Следим за скроллом и анимируем хедер
-  useEffect(() => {
-    return scrollY.onChange((latest) => {
-      const delta = latest - lastScrollY.current;
-      const currentY = headerY.get();
-      
-      // Вычисляем новую позицию хедера
-      let newY = currentY - delta;
-      // Ограничиваем движение хедера
-      newY = Math.min(0, Math.max(-headerHeight, newY));
-      
-      headerY.set(newY);
-      lastScrollY.current = latest;
-    });
-  }, [scrollY, headerHeight, headerY]);
-
-  // Трансформируем значение headerY в opacity для плавного появления/исчезновения
-  const opacity = useTransform(
-    headerY,
-    [-headerHeight, -headerHeight/2, 0],
-    [0, 0.5, 1]
-  );
-
   return (
-    <motion.div
+    <div
       ref={headerRef}
       className="lcontainer"
       style={{
@@ -50,14 +22,6 @@ function Header({ headerHeight, setHeight }) {
         left: 0,
         width: '100%',
         zIndex: 5,
-        y: headerY,
-        opacity
-      }}
-      initial={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      whileHover={{
-        background: '#fff',
-        transition: { duration: 0.5 },
       }}
     >
       <header>
@@ -73,7 +37,7 @@ function Header({ headerHeight, setHeight }) {
           <span className="bottomline"></span>
         </div>
       </header>
-    </motion.div>
+    </div>
   );
 }
 
